@@ -1,0 +1,60 @@
+#패키지
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys #selenium으로 키 조작
+
+import requests
+from bs4 import BeautifulSoup as bs
+
+# 5. 페이지 넘김 for문 추가
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install())) 
+url = 'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000163730&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EC%84%A0%ED%81%AC%EB%A6%BC&t_number=2&dispCatNo=1000001001100010001&trackingCd=Result_2'
+driver.get(url)
+time.sleep(3)
+driver.find_element(By.CLASS_NAME, value = 'goods_reputation').click()
+time.sleep(10)
+driver.find_element(By.ID, value = 'searchType_3').click()
+
+txt_list = []
+
+for current_page in range(1, 40): #리뷰 인덱스
+    
+    #페이지 내 리뷰 출력
+    wait = WebDriverWait(driver, 10)
+    wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'review_list_wrap')))
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'html.parser')
+    selector = '.review_list_wrap .info:has(.more_msg) + .review_cont .txt_inner'
+    review_cont_elements = soup.select(selector)
+    
+    for review_cont_element in review_cont_elements:
+        txt_list_page = [i.text for i in review_cont_elements]
+    txt_list.extend(txt_list_page)
+    
+    
+    #txt_list에 100개 이상의 리뷰가 모이면 반복문 중단
+    if len(txt_list)>=100: #정확히 100개를 모으지는 못함
+        break
+    
+    
+    #페이지 넘김 if문
+    if current_page % 10 != 0: # 현재 페이지가 10의 배수가 아닐 때
+        if current_page // 10 < 1: # 페이지 수가 한 자리수 일 때  
+            page_button = driver.find_element(By.CSS_SELECTOR, f'#gdasContentsArea > div > div.pageing > a:nth-child({current_page%10+1})')
+            page_button.click() 
+            time.sleep(2)
+        else: # 페이지 수가 두자리 수 이상일 때 
+            page_button = driver.find_element(By.CSS_SELECTOR, f'#gdasContentsArea > div > div.pageing > a:nth-child({current_page%10+2})')
+            page_button.click() 
+            time.sleep(2)
+    else:
+        next_button = driver.find_element(By.CSS_SELECTOR, '#gdasContentsArea > div > div.pageing > a.next')
+        next_button.click() # 현재 페이지가 10의 배수일 때 페이지 넘김 버튼 클릭
+        time.sleep(2)
+
+#txt_list에 100보다 많은 리뷰 수가 들어가있을 때, 100까지만 남기는 코드
+if len(txt_list) > 100:
+    del txt_list[100:]
