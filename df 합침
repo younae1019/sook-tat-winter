@@ -1,0 +1,79 @@
+url_list = ['https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000169499&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EB%A7%88%EB%8B%A4%EA%B0%80%EC%8A%A4%EC%B9%B4%EB%A5%B4&t_number=3&dispCatNo=1000001001100010001&trackingCd=Result_3',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000165465&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EB%8B%AC%EB%B0%94',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000149135&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EB%9D%BC%EC%9A%B4%EB%93%9C%EB%9E%A9',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000162578&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%ED%86%A0%EB%A6%AC%EB%93%A0',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000168920&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EB%94%94%EC%96%B4%2C%ED%81%B4%EB%A0%88%EC%96%B4%EC%8A%A4&t_number=1&dispCatNo=1000001001100010001&trackingCd=Result_1',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000180162&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EB%8B%A5%ED%84%B0%EC%A7%80%20%EA%B7%B8%EB%A6%B0%20%EB%A7%88%EC%9D%BC%EB%93%9C%20%EC%97%85%20%EC%84%A0%20%ED%94%8C%EB%9F%AC%EC%8A%A4&t_number=2&dispCatNo=1000001001100010001&trackingCd=Result_2',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000183195&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EB%8B%A5%ED%84%B0%EC%A7%80%20%EA%B7%B8%EB%A6%B0%20%EB%A7%88%EC%9D%BC%EB%93%9C%20%EC%97%85%20%EC%84%A0%20%ED%94%8C%EB%9F%AC%EC%8A%A4&t_number=1&dispCatNo=1000001001100010001&trackingCd=Result_1',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000181534&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EB%B9%84%ED%94%8C%EB%A0%88%EC%9D%B8',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000165465&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EB%8B%AC%EB%B0%94%20%EC%9B%8C%ED%84%B0%ED%92%80%20%EC%84%A0%ED%81%AC%EB%A6%BC&t_number=3&dispCatNo=1000001001100010001&trackingCd=Result_3',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000179126&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%ED%86%A0%EC%BD%94%EB%B3%B4%20%EB%B0%94%EC%9D%B4%EC%98%A4%20%EC%9B%8C%ED%84%B0%EB%A6%AC%20%EC%84%A0%ED%81%AC%EB%A6%BC&t_number=1&dispCatNo=1000001001100010001&trackingCd=Result_1',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000125147&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EC%97%94%EC%A1%B0%EC%9D%B4',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000106503&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EC%85%80%ED%93%A8%EC%A0%84%EC%94%A8%20%EB%A0%88%EC%9D%B4%EC%A0%80%20%EC%8D%AC%EC%8A%A4%ED%81%AC%EB%A6%B0&t_number=1&dispCatNo=1000001000800050004&trackingCd=Result_1',
+           'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000179853&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%EC%85%80%ED%93%A8%EC%A0%84%EC%94%A8%20%EB%A0%88%EC%9D%B4%EC%A0%80%20%EC%8D%AC%EC%8A%A4%ED%81%AC%EB%A6%B0&t_number=2&dispCatNo=1000001001100010001&trackingCd=Result_2']
+
+
+
+
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+name_list=[]
+compo_list=[]
+volume_list=[]
+price_list=[]
+
+for url in url_list:
+    driver.get(url)
+    time.sleep(3)
+    
+    #이름
+    name = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.prd_info p.prd_name')))
+
+    #원가
+    #time.sleep(3)
+    #price = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="Contents"]/div[2]/div[2]/div/div[1]/span[1]/strike')))
+    #price = float(price.text.replace(',', ''))
+    
+    #용량
+    #driver.find_element(By.CLASS_NAME, value = 'goods_buyinfo').click()
+    #volume = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="artcInfo"]/dl[2]/dd')))
+    #volume = float(volume.text.replace('ml', ''))
+    
+    #성분
+    driver.find_element(By.CLASS_NAME, value = 'goods_buyinfo').click()
+    compo = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="artcInfo"]/dl[8]/dd')))
+    
+    name_list.append(name.text)
+    compo_list.append(compo.text)
+    volume_list.append(volume)
+    price_list.append(price)
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+
+chemical_list = ["옥시벤존", "에칠헥실트리아존", "에칠헥실메톡시시나메이트", "에칠헥실살리실레이트", "부틸메톡시디벤조일메탈", "에칠헥실살리실레이트", "아보벤존", "설리소벤존"]
+physical_list = ["티타늄디옥사이드", "징크옥사이드"]
+
+df['자외선'] = 0
+
+UV_list=[]
+for element in df['성분']:
+    #요소 나누기
+    element_list = element.split(', ')
+    element_list = element_list[0:]
+    
+    #유기자차 성분 확인
+    
+    found_chemical = [substance for substance in chemical_list if substance in element_list]
+    found_physical = [substance for substance in physical_list if substance in element_list]
+    if found_chemical and not found_physical:
+        UV_list.append('유기')
+    elif not found_chemical and found_physical:
+        UV_list.append('무기')
+    elif found_chemical and found_physical:
+        UV_list.append('혼합')
+    else:
+        UV_list.append('오류')    
+        
+df['자외선'] = UV_list
