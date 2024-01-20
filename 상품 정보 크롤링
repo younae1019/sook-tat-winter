@@ -25,7 +25,6 @@ print(price_per_10ml)
 ##제품 성분
 compo = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="artcInfo"]/dl[8]/dd')))
 compo = compo.text
-
 ##무기/유기/혼합 구분
 type = ""
 chemical_list = ["옥시벤존", "에칠헥실트리아존", "에칠헥실메톡시시나메이트", "에칠헥실살리실레이트", "부틸메톡시디벤조일메탈", "에칠헥실살리실레이트", "아보벤존", "설리소벤존"]
