@@ -1,0 +1,46 @@
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+url = 'https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000185636&t_page=%ED%86%B5%ED%95%A9%EA%B2%80%EC%83%89%EA%B2%B0%EA%B3%BC%ED%8E%98%EC%9D%B4%EC%A7%80&t_click=%EA%B2%80%EC%83%89%EC%83%81%ED%92%88%EC%83%81%EC%84%B8&t_search_name=%ED%86%A0%EB%A6%AC%EB%93%A0%20%EB%B0%B8%EB%9F%B0%EC%8A%A4%ED%92%80%20%EC%8B%9C%EC%B9%B4%20%ED%86%A4%EC%97%85%20%EC%84%A0%ED%81%AC%EB%A6%BC&t_number=1&dispCatNo=1000001001100010001&trackingCd=Result_1'
+driver.get(url)
+time.sleep(3)
+
+##상품 이름
+name = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.prd_info p.prd_name')))
+print(name.text)
+
+##원가
+price = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="Contents"]/div[2]/div[2]/div/div[1]/span[1]/strike')))
+price = float(price.text.replace(',', ''))
+print(price)
+
+driver.find_element(By.CLASS_NAME, value = 'goods_buyinfo').click()
+##용량
+volume = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="artcInfo"]/dl[2]/dd')))
+volume = float(volume.text.replace('ml', ''))
+print(volume)
+
+##용량 대비 가격 (일단은 10ml로 잡음. 더 좋은 기준이 있을까?)
+price_per_10ml = round(((price / volume) *10), 3) # 일단 소수점 셋째 자리까지 반올림 => 어떻게 표기하는게 좋을지 추가논의
+print(price_per_10ml)
+
+##제품 성분
+compo = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="artcInfo"]/dl[8]/dd')))
+compo = compo.text
+
+##무기/유기/혼합 구분
+type = ""
+chemical_list = ["옥시벤존", "에칠헥실트리아존", "에칠헥실메톡시시나메이트", "에칠헥실살리실레이트", "부틸메톡시디벤조일메탈", "에칠헥실살리실레이트", "아보벤존", "설리소벤존"]
+physical_list = ["티타늄디옥사이드", "징크옥사이드"]
+found_chemical = [substance for substance in chemical_list if substance in compo]
+found_physical = [substance for substance in physical_list if substance in compo]
+if found_chemical and not found_physical:
+    type = "유기자차"
+elif not found_chemical and found_physical:
+    type = "무기자차"
+elif found_chemical and found_physical:
+    type = "혼합자차"
+print(f"포함된 유기성분: {', '.join(found_chemical)}")
+print(f"포함된 무기성분: {', '.join(found_physical)}")
+print(type)
+driver.close()
+
+##UV 지수?
